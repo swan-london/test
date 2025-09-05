@@ -1,7 +1,7 @@
 # This workflow will run upon repository creation and clean up
 # all files that are not strictly required to build an AEM Live project
 # but that we use to develop the project template. This includes this
-# particular workflow file.
+# particular workflow file. 
 on:
   create:
     branches:
