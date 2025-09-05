@@ -39,9 +39,7 @@ jobs:
           cat > fstab.yaml << 'EOL'
           mountpoints:
             /:
-              url: https://author-p133911-e1313554.adobeaemcloud.com/bin/franklin.delivery/{owner}/{repo}/main
-              type: "markup"
-              suffix: ".html"
+              url: https://drive.google.com/drive/folders/13Y9aQ3K-qm65RN6xvIVKI2krMCP1bev6?usp=drive_link
           EOL
           sed -i.bak "s/{repo}/$(basename ${{ github.repository }})/g" fstab.yaml
           sed -i.bak "s/{owner}/$(dirname ${{ github.repository }})/g" fstab.yaml
