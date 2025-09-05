@@ -31,8 +31,8 @@ jobs:
       - name: Initialize README
         # replace {repo} and {owner} with the actual values
         run: |
-          sed -i.bak "s/{repo}/$(basename ${{ github.repository }})/g" README.md
-          sed -i.bak "s/{owner}/$(dirname ${{ github.repository }})/g" README.md
+          sed -i.bak "s/{test}/$(basename ${{ github.repository }})/g" README.md
+          sed -i.bak "s/{swan-london}/$(dirname ${{ github.repository }})/g" README.md
 
       - name: Create fstab.yaml for hlx4 projects
         run: |
