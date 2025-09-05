@@ -43,13 +43,13 @@ jobs:
               type: "markup"
               suffix: ".html"
           EOL
-          sed -i.bak "s/{repo}/$(basename ${{ github.repository }})/g" fstab.yaml
-          sed -i.bak "s/{owner}/$(dirname ${{ github.repository }})/g" fstab.yaml
+          sed -i.bak "s/{test}/$(basename ${{ github.repository }})/g" fstab.yaml
+          sed -i.bak "s/{swan-london}/$(dirname ${{ github.repository }})/g" fstab.yaml
 
       - name: Initialize Pull Request Template
         run: |
-          sed -i.bak "s/{repo}/$(basename ${{ github.repository }})/g" .github/pull_request_template.md
-          sed -i.bak "s/{owner}/$(dirname ${{ github.repository }})/g" .github/pull_request_template.md
+          sed -i.bak "s/{test}/$(basename ${{ github.repository }})/g" .github/pull_request_template.md
+          sed -i.bak "s/{swan-london}/$(dirname ${{ github.repository }})/g" .github/pull_request_template.md
 
         # commit back to the repository
       - name: Commit changes
